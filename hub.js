@@ -19,7 +19,7 @@ async function loadExhibition(siteId) {
 
     try {
         // 2. HTML 컨텐츠 가져오기
-        const response = await fetch(`exhibitions/${siteId}/content.html`);
+        const response = await fetch(`./exhibitions/${siteId}/content.html`);
         if (!response.ok) throw new Error(`Failed to load ${siteId} content`);
         const html = await response.text();
 
@@ -51,7 +51,7 @@ function injectCSS(siteId) {
     return new Promise((resolve) => {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = `exhibitions/${siteId}/style.css`;
+        link.href = `./exhibitions/${siteId}/style.css`;
         link.className = 'site-asset';
         link.onload = resolve;
         document.head.appendChild(link);
@@ -65,7 +65,7 @@ function injectCSS(siteId) {
 function injectJS(siteId) {
     return new Promise((resolve) => {
         const script = document.createElement('script');
-        script.src = `exhibitions/${siteId}/script.js`;
+        script.src = `./exhibitions/${siteId}/script.js`;
         script.className = 'site-asset';
         script.onload = () => {
             // 사이트별 초기화 함수 호출 (window.initSite1, window.initSite2 등)
