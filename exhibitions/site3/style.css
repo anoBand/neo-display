@@ -1,0 +1,356 @@
+/* site3/style.css - Scoped and Asset paths corrected */
+
+.site3 {
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+}
+
+.site3 .main-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px 20px 20px;
+    box-sizing: border-box;
+}
+
+.site3 h1 {
+    text-align: center;
+    color: #333;
+    font-size: 15vw;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 0.2em;
+}
+
+.site3 h2 {
+    text-align: center;
+    color: #555;
+    font-size: 5vw;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 2em;
+}
+
+.site3 .instruction-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+
+.site3 .phase-divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 40px 0 20px 0;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.site3 .phase-divider span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+.site3 .phase-divider::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.site3 nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+}
+
+.site3 nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 1rem 0;
+    position: relative;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.site3 nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #0366d6;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+    transform-origin: bottom right;
+}
+
+.site3 nav a:hover::after,
+.site3 nav a.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.site3 .tab-content {
+    position: relative;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+
+.site3 .tab-content > section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    transition: opacity 0.5s ease;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.site3 .tab-content > section.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
+.site3 .details-box {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1.5em 2em;
+    margin: 2em auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.site3 .details-box h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.site3 .details-box p {
+    margin: 0.5em 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.site3 .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.site3 .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.site3 .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+.site3 .card-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.site3 .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.site3 .card-front, .site3 .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.site3 .card-front {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.site3 .card-image-1 { background-image: url("./media/image_1-1.jpg"); }
+.site3 .card-image-2 { background-image: url("./media/image_1-2.jpg"); }
+.site3 .card-image-3 { background-image: url("./media/image_1-3.jpg"); }
+.site3 .card-image-4 { background-image: url("./media/image_1-4.jpg"); }
+.site3 .card-image-5 { background-image: url("./media/image_1-5.jpg"); }
+.site3 .card-image-6 { background-image: url("./media/image_1-6.jpg"); }
+.site3 .card-image-7 { background-image: url("./media/image_1-7.jpg"); }
+.site3 .card-image-8 { background-image: url("./media/image_1-8.jpg"); }
+.site3 .card-image-9 { background-image: url("./media/image_1-9.jpg"); }
+.site3 .card-image-10 { background-image: url("./media/image_1-10.jpg"); }
+.site3 .card-image-11 { background-image: url("./media/image_2-1.jpg"); }
+.site3 .card-image-12 { background-image: url("./media/image_2-2.jpg"); }
+.site3 .card-image-13 { background-image: url("./media/image_2-3.jpg"); }
+.site3 .card-image-14 { background-image: url("./media/image_2-4.jpg"); }
+.site3 .card-image-15 { background-image: url("./media/image_2-5.jpg"); }
+.site3 .card-image-16 { background-image: url("./media/image_2-6.jpg"); }
+.site3 .card-image-17 { background-image: url("./media/image_2-7.jpg"); }
+.site3 .card-image-18 { background-image: url("./media/image_2-8.jpg"); }
+.site3 .card-image-19 { background-image: url("./media/image_2-9.jpg"); }
+.site3 .card-image-20 { background-image: url("./media/image_2-10.jpg"); }
+
+.site3 .card-back {
+    transform: rotateY(180deg);
+    background-color: #2c2c2c;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.site3 .card-back p {
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.site3 .card-front::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 70%);
+    z-index: 5;
+    pointer-events: none;
+    border-radius: 15px;
+}
+
+.site3 .card-front-title {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
+    font-size: 1.95rem;
+    line-height: 1.1;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: left;
+    margin: 0;
+    z-index: 10;
+    pointer-events: none;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    max-width: 50%;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.site3 .chat-window {
+    width: 100%;
+    height: 500px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.site3 .chat-message {
+    padding: 12px 18px;
+    border-radius: 12px;
+    max-width: 85%;
+    line-height: 1.6;
+    word-wrap: break-word;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.site3 .chat-message.received {
+    background-color: #efefef;
+    color: #000;
+    align-self: flex-start;
+}
+
+.site3 .chat-message.sent {
+    color: white;
+    align-self: flex-end;
+}
+
+.site3 .chat-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.site3 #chat-input {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 12px 18px;
+    font-size: 1em;
+}
+
+.site3 .chat-form button {
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0 20px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+@media (min-width: 768px) {
+    .site3 h1 { font-size: 6rem; }
+    .site3 h2 { font-size: 2rem; }
+}
+
+@media (max-width: 580px) {
+    .site3 .grid-container {
+        grid-template-columns: 1fr;
+        max-width: 270px;
+        margin: 0 auto;
+    }
+    .site3 .card-front-title {
+        font-size: 1.2rem;
+    }
+}
