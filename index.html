@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEOSTREAM Exhibition Hub</title>
+    <!-- 공통 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&family=Noto+Sans+KR:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hub.css">
+    <!-- 외부 의존성 (Site 3용) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+</head>
+<body>
+    <nav class="hub-nav">
+        <div class="logo">NEO-DISPLAY</div>
+        <ul class="nav-links">
+            <li><a href="#site1" data-site="site1">AUTUMN</a></li>
+            <li><a href="#site2" data-site="site2">THE GIG</a></li>
+            <li><a href="#site3" data-site="site3">ANNUAL</a></li>
+        </ul>
+    </nav>
+
+    <div id="exhibition-container">
+        <!-- 전시물 컨텐츠가 여기에 동적으로 로드됩니다 -->
+        <div class="welcome-screen">
+            <h1>Welcome to NEOSTREAM Exhibition</h1>
+            <p>상단 메뉴를 선택하여 전시물을 관람하세요.</p>
+        </div>
+    </div>
+
+    <script src="hub.js"></script>
+</body>
+</html>
